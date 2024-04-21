@@ -1,0 +1,6 @@
+#update khi thanh toan
+  $newqt_pro = $oldqt_pro - $_POST['soluong'];
+  $pr_sql= "UPDATE `products` SET
+         `qt_pro`='$newqt_pro' WHERE `id_pro` = '$id'";
+         $pr_data = $conn-> prepare($pr_sql);
+         $pr_data -> execute();
